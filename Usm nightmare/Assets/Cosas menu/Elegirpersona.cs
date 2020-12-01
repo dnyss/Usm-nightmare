@@ -3,45 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Elegirpersona: MonoBehaviour{
-    public void ElegirPers (){
 
+
+public class Elegirpersona : MonoBehaviour
+{
+    public GameObject Eleccion_chica;
+    //si se elige a la chica esta funcion se activa
+    public void ElegirPers1()
+    {
+        Eleccion_chica.SetActive(true);    //la eleccion chica es verdadero
+        SceneManager.LoadScene("Jugador"); //se carga la escena del juego
+    }
+
+    public GameObject Eleccion_chico;
+    public void ElegirPers2()
+    {
+        Eleccion_chico.SetActive(true);
         SceneManager.LoadScene("Jugador");
-    
-    }  
-
-}
-public class boton1 : MonoBehaviour{
-    public GameObject Chica;
-        public void ElegirPers (){
-        void OnMouseDown()
-        {
-            if(Input.GetMouseButtonDown(0)){
-                Chica.SetActive (true); 
-            }
-        }
-
-        SceneManager.LoadScene("Jugador");
-    
-    }  
-
-
-
+    }
 }
 
 
-public class boton2 : MonoBehaviour{
-    public GameObject Chico;
-        public void ElegirPers (){
-        void OnMouseDown()
-        {
-            if(Input.GetMouseButtonDown(0)){
-                Chico.SetActive (true); 
-            }
-        }
-
-        SceneManager.LoadScene("Jugador");
-    
-    } 
-
-} 

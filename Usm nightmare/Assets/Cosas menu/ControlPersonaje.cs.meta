@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 3e9081bc70178f6438a23aefc39c2330
+guid: 3dd18195eae5b4f40a14343c80cfdc5f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - Chica: {instanceID: 0}
-  - Chico: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
