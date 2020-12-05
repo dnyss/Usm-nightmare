@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Eleccion_chica
   - Eleccion_chico
+  - datos
   layers:
   - Default
   - TransparentFX

@@ -12,14 +12,16 @@ public class Elegirpersona : MonoBehaviour
     public void ElegirPers1()
     {
         Eleccion_chica.SetActive(true);    //la eleccion chica es verdadero
-        SceneManager.LoadScene("Jugador"); //se carga la escena del juego
+        Eleccion_chico.SetActive(false);
+        SceneManager.LoadScene("Niveles"); //se carga la escena del juego
     }
 
     public GameObject Eleccion_chico;
     public void ElegirPers2()
     {
         Eleccion_chico.SetActive(true);
-        SceneManager.LoadScene("Jugador");
+        Eleccion_chica.SetActive(false);
+        SceneManager.LoadScene("Niveles");
     }
 }
 
