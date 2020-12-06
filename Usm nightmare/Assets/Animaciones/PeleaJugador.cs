@@ -7,8 +7,10 @@ public class PeleaJugador : MonoBehaviour
     public Animator animator;
 
     public Transform puntoAtaque;
-    public float rangoAtaque = 0.5f;
     public LayerMask capaEnemigos;
+
+    public float rangoAtaque = 0.5f;
+    public int DañoAtaque = 20;
 
     void Update()
     {
@@ -33,7 +35,8 @@ public class PeleaJugador : MonoBehaviour
         //quitarle vida al enemigo
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log(enemy.name);
+            Debug.Log("ataqué al enemigo");
+            enemy.GetComponent<Enemy>().SerAtacado(DañoAtaque);
         }
     }
 
