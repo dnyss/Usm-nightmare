@@ -50,22 +50,6 @@ public class MovimientoJugador : MonoBehaviour
             animator.SetBool("isJumping", true);
         }
     
-    public void EnemyKnockBack(float enemyPosx){
-
-        healthbar.SendMessage("TakeDamage", 15);
-
-        jump = true
-
-        float side = Mathf.Sign(enemyPosx - transform.position.x);
-        Rigidbody2D.AddForce(Vector2.left * side * jump, ForceMode2D.Impulse);
-
-        move = false;
-        Invoke("EnableMovement", 0.7f);
-
-        Color color = new Color(255/255f, 106/255f, 0/255f);
-        spr.color = color;
-    }
-
     
 }
 
@@ -76,6 +60,9 @@ private bool IsGrounded()
     RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
     return raycastHit.collider != null;
 }
+public void EnemyKnockBack(float enemyPosx){
 
+    healthbar.SendMessage("TakeDamage", 15);
 
+    }
 }
