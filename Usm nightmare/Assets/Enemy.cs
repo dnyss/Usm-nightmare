@@ -30,4 +30,54 @@ public class Enemy : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
 
     }
+
+    //esto es para dar vuelta la imagen si el jugador esta a la izquierda
+    public Transform jugador;
+    public bool isFlipped = false;
+
+    public void LookAtPlayer()
+    {
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+
+        if(transform.position.x > jugador.position.x && isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = false;
+        }
+        else if (transform.position.x <= jugador.position.x && !isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = true;
+        }
+    }
+    //ataque enemigo
+    public Transform puntoAtaque;
+    public LayerMask capajugadores;
+
+    public float rangoAtaque = 5f;
+    public int DañoAtaque = 20;
+
+    void EnemyAttack()
+    {
+        //Detectar si el enemigo está cerca
+        Collider2D[] hitJugador = Physics2D.OverlapCircleAll(puntoAtaque.position, rangoAtaque, capajugadores);
+
+        //quitarle vida al enemigo
+        foreach (Collider2D player in hitJugador)
+        {
+            //player.GetComponent<MovimientoJugador>().SerAtacado(DañoAtaque);
+        }
+    }
+
+    //Esto sirve solo para ver donde esta el area de ataque:
+    void OnDrawGizmosSelected()
+    {
+        if (puntoAtaque == null)
+            return;
+        Gizmos.DrawWireSphere(puntoAtaque.position, rangoAtaque);
+    }
+
 }

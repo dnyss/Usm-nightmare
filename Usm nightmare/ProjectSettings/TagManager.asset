@@ -7,6 +7,7 @@ TagManager:
   - Eleccion_chica
   - Eleccion_chico
   - datos
+  - jugador
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Suelo
   - enemigos
-  - 
+  - capaJugadores
   - 
   - 
   - 
