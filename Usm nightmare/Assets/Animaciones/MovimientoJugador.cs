@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimientoJugador : MonoBehaviour
 {
+    private const int V = 10;
     public float jump;
     public float speed;
     private float move;
@@ -15,6 +17,8 @@ public class MovimientoJugador : MonoBehaviour
 
     [SerializeField] private LayerMask platformLayerMask;
     private BoxCollider2D boxCollider2d;
+    public Slider VidaSlider;
+    
 
     private void Awake()
     {
@@ -50,19 +54,22 @@ public class MovimientoJugador : MonoBehaviour
             animator.SetBool("isJumping", true);
         }
     
-    
-}
+    }
 
 //para revisar si está tocando el suelo o no:
-private bool IsGrounded()
-{
-    float extraHeightText = 1f;
-    RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
-    return raycastHit.collider != null;
-}
-public void EnemyKnockBack(float enemyPosx){
-
-    healthbar.SendMessage("TakeDamage", 15);
-
+    private bool IsGrounded(){
+        
+        float extraHeightText = 1f;
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
+        return raycastHit.collider != null;
+        }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Integral"){
+            VidaSlider.value -= 0.3f;
+        }
     }
+
+
 }
