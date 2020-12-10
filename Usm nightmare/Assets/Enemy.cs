@@ -53,32 +53,5 @@ public class Enemy : MonoBehaviour
             isFlipped = true;
         }
     }
-    //ataque enemigo
-    public Transform puntoAtaque;
-    public LayerMask capajugadores;
-
-    public float rangoAtaque = 5f;
-    public int DañoAtaque = 20;
-
-    void EnemyAttack()
-    {
-        //Detectar si el enemigo está cerca
-        Collider2D[] hitJugador = Physics2D.OverlapCircleAll(puntoAtaque.position, rangoAtaque, capajugadores);
-
-        //quitarle vida al enemigo
-        foreach (Collider2D player in hitJugador)
-        {
-            //player.GetComponent<MovimientoJugador>().SerAtacado(DañoAtaque);
-        }
-    }
-
-    //Esto sirve solo para ver donde esta el area de ataque:
-    void OnDrawGizmosSelected()
-    {
-        if (puntoAtaque == null)
-            return;
-        Gizmos.DrawWireSphere(puntoAtaque.position, rangoAtaque);
-    }
-
 
 }

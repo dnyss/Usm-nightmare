@@ -63,13 +63,25 @@ public class MovimientoJugador : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
         return raycastHit.collider != null;
         }
-    
+        
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Integral"){
-            VidaSlider.value -= 0.3f;
+    if(collision.gameObject.tag == "EnemigoDebil"){
+            VidaSlider.value -= 0.1f;
         }
+    if (collision.gameObject.tag == "EnemigoMedio")
+    {
+        VidaSlider.value -= 0.2f;
     }
 
-
+    if (collision.gameObject.tag == "EnemigoFinal")
+    {
+        VidaSlider.value -= 0.3f;
+    }
+        //Si el jugador muere
+        if (VidaSlider.value <= 0)
+    {
+        Destroy(gameObject);
+    }
+    }
 }

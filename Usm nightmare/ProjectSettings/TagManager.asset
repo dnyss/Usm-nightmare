@@ -8,8 +8,9 @@ TagManager:
   - Eleccion_chico
   - datos
   - jugador
-  - Enemy
-  - Integral
+  - EnemigoDebil
+  - EnemigoMedio
+  - EnemigoFinal
   layers:
   - Default
   - TransparentFX
