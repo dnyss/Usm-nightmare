@@ -30,4 +30,9 @@ public class Enemy : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
 
     }
+    void OnTriggerEnter2D(Collider2D col){
+        if (col.gameObject.tag == "Player"){
+            col.SendMessage("EnemyKnockBack");
+        }
+    }
 }
