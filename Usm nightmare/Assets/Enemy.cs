@@ -32,21 +32,21 @@ public class Enemy : MonoBehaviour
     }
 
     //esto es para dar vuelta la imagen si el jugador esta a la izquierda
-    public Transform jugador;
     public bool isFlipped = false;
 
     public void LookAtPlayer()
     {
+        GameObject jugador = GameObject.FindGameObjectWithTag("jugador");
         Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
 
-        if(transform.position.x > jugador.position.x && isFlipped)
+        if (transform.position.x > jugador.transform.position.x && isFlipped)
         {
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlipped = false;
         }
-        else if (transform.position.x <= jugador.position.x && !isFlipped)
+        else if (transform.position.x <= jugador.transform.position.x && !isFlipped)
         {
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
