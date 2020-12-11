@@ -8,7 +8,7 @@ Somos un equipo de estudiantes de primer año de Ingeniería Civil Informática 
 ## Menu de elección de nivel:
 ![](imagenes/menunivel.jpg)
 
-## Enemigos de por cada nivel:
+## Enemigos de cada nivel:
 ![](imagenes/enemy1.jpg)
 ![](imagenes/enemy2.jpg)
 
