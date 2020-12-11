@@ -14,20 +14,20 @@ public class PeleaJugador : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             Attack();
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        /*
+        if (Input.GetKeyDown(KeyCode.X))
         {
             Attack();
-        }
+        }*/
     }
     void Attack()
     {
-        Debug.Log("atacando ");
         //Poner animación de golpe
-        //animator.SetTrigger("golpe");
+        animator.SetTrigger("golpe");
 
         //Detectar si el enemigo está cerca
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(puntoAtaque.position, rangoAtaque, capaEnemigos);

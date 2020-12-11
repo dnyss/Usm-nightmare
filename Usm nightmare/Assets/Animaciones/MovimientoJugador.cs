@@ -66,16 +66,19 @@ public class MovimientoJugador : MonoBehaviour
         
     private void OnCollisionEnter2D(Collision2D collision)
     {
-    if(collision.gameObject.tag == "EnemigoDebil"){
-            VidaSlider.value -= 0.05f;
+    if (collision.gameObject.tag == "EnemigoDebil"){
+        animator.SetTrigger("herido");
+        VidaSlider.value -= 0.05f;
         }
     if (collision.gameObject.tag == "EnemigoMedio")
     {
+        animator.SetTrigger("herido");
         VidaSlider.value -= 0.1f;
-    }
+        }
 
     if (collision.gameObject.tag == "EnemigoFinal")
     {
+        animator.SetTrigger("herido");
         VidaSlider.value -= 0.2f;
     }
         //Si el jugador muere
