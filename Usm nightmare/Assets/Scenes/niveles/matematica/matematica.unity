@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 750129507}
   - component: {fileID: 750129506}
   m_Layer: 0
-  m_Name: power up 2
+  m_Name: power up vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,10 +385,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 750129505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2417925aca9002d4583ee1cb4eba75c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ac646072c06d044798ee7967b824c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FuerzaExtra: 20
+  VidaExtra: 0.2
 --- !u!61 &750129507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 1169865619}
   - component: {fileID: 1169865618}
   m_Layer: 0
-  m_Name: power up
+  m_Name: power up fuerza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,10 +761,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1169865617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac646072c06d044798ee7967b824c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 2417925aca9002d4583ee1cb4eba75c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VidaExtra: 20
+  FuerzaExtra: 20
 --- !u!61 &1169865619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -849,7 +849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169865617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 323.9, y: 119.2, z: 0}
+  m_LocalPosition: {x: 387.4, y: 102.7, z: 0}
   m_LocalScale: {x: 1.5939728, y: 1.3959808, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
