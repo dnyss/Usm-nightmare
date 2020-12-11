@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public int VidaExtra = 20;
+    public float VidaExtra = 0.2f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("jugador"))
@@ -14,9 +14,9 @@ public class PowerUp : MonoBehaviour
     }
     void Recoger()
     {
-        //PlayerStats stats = jugador.GetComponent<nombre del script donde este la vida> ();
-        //stats.nombre variable de vida += VidaExtra;
-        Debug.Log("recogido");
+        GameObject jugador = GameObject.FindGameObjectWithTag("jugador");
+        MovimientoJugador stats = jugador.GetComponent<MovimientoJugador> ();
+        stats.VidaSlider.value += VidaExtra;
         Destroy(gameObject);
     }
 }

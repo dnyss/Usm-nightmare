@@ -232,6 +232,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1324542760381452732, guid: 898f07bc8a47d0441ab19abff56d2156,
+        type: 3}
+      propertyPath: VidaSlider
+      value: 
+      objectReference: {fileID: 685079539}
     - target: {fileID: 1633071103876694658, guid: 898f07bc8a47d0441ab19abff56d2156,
         type: 3}
       propertyPath: m_AngularDrag
@@ -458,6 +463,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8007955270890838986, guid: 4d2c9d3d4f0106243aa8dd42e2fe1b44,
+        type: 3}
+      propertyPath: VidaSlider
+      value: 
+      objectReference: {fileID: 685079539}
     - target: {fileID: 8500813515450811792, guid: 4d2c9d3d4f0106243aa8dd42e2fe1b44,
         type: 3}
       propertyPath: m_LocalPosition.x

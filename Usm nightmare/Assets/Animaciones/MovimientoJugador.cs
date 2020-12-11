@@ -67,16 +67,16 @@ public class MovimientoJugador : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
     if(collision.gameObject.tag == "EnemigoDebil"){
-            VidaSlider.value -= 0.1f;
+            VidaSlider.value -= 0.05f;
         }
     if (collision.gameObject.tag == "EnemigoMedio")
     {
-        VidaSlider.value -= 0.2f;
+        VidaSlider.value -= 0.1f;
     }
 
     if (collision.gameObject.tag == "EnemigoFinal")
     {
-        VidaSlider.value -= 0.3f;
+        VidaSlider.value -= 0.2f;
     }
         //Si el jugador muere
         if (VidaSlider.value <= 0)

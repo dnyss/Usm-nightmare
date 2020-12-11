@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &572666304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572666305}
+  m_Layer: 0
+  m_Name: puntoAtaque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &572666305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572666304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0303415, y: -1.5230353, z: -109.60156}
+  m_LocalScale: {x: 0.4906374, y: 0.49130195, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8500813515450811792}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2668520728839968252
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,9 +45,10 @@ GameObject:
   - component: {fileID: 8007955270890838986}
   - component: {fileID: 7545263070018062929}
   - component: {fileID: 4704836937762903980}
+  - component: {fileID: 1750976997}
   m_Layer: 0
   m_Name: Boy
-  m_TagString: Untagged
+  m_TagString: jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,9 +62,10 @@ Transform:
   m_GameObject: {fileID: 2668520728839968252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 330.8, y: 108.3, z: 0}
-  m_LocalScale: {x: 1.931181, y: 1.9372289, z: 1}
+  m_LocalScale: {x: 2.038165, y: 2.035408, z: 1}
   m_Children:
   - {fileID: 707165499790093863}
+  - {fileID: 572666305}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -127,7 +159,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -152,6 +184,7 @@ MonoBehaviour:
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  VidaSlider: {fileID: 0}
 --- !u!95 &7545263070018062929
 Animator:
   serializedVersion: 3
@@ -186,6 +219,25 @@ MonoBehaviour:
   Eleccion_chica: {fileID: 0}
   Girl: {fileID: 0}
   Boy: {fileID: 2668520728839968252}
+--- !u!114 &1750976997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2668520728839968252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7604206787f9bb84cb983bc1519e257f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7545263070018062929}
+  puntoAtaque: {fileID: 572666305}
+  capaEnemigos:
+    serializedVersion: 2
+    m_Bits: 512
+  rangoAtaque: 9.64
+  "Da\xF1oAtaque": 20
 --- !u!1 &6401610867163418659
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6401610867163418659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.7874875, z: -10}
+  m_LocalPosition: {x: 0, y: 2.6530313, z: -10}
   m_LocalScale: {x: 0.51781785, y: 0.51620126, z: 1}
   m_Children:
   - {fileID: 7720134139485718352}
