@@ -10,6 +10,7 @@ public class MovimientoJugador : MonoBehaviour
     public float speed;
     private float move;
     private Rigidbody2D rb;
+    private bool facingRight; 
 
     public Animator animator;
 
@@ -30,6 +31,8 @@ public class MovimientoJugador : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         healthbar = GameObject.Find("Barra de vida");
+
+        facingRight = true;
     }
     void Update()
     {
@@ -38,7 +41,7 @@ public class MovimientoJugador : MonoBehaviour
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
 
         //para la animacion de correr
-        animator.SetFloat("Speed", move);
+        animator.SetFloat("Speed", Mathf.Abs(move));
 
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
@@ -53,7 +56,19 @@ public class MovimientoJugador : MonoBehaviour
         {   //si no esta tocando el suelo el salto es verdadero
             animator.SetBool("isJumping", true);
         }
-    
+        Flip(move);
+
+    }
+    private void Flip(float move)
+    {
+        if(move > 0 && !facingRight ||move<0 && facingRight)
+        {
+            facingRight = !facingRight;
+
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
     }
 
 //para revisar si está tocando el suelo o no:

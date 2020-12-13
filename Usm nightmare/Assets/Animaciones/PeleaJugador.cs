@@ -18,11 +18,6 @@ public class PeleaJugador : MonoBehaviour
         {
             Attack();
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Attack();
-        }*/
     }
     void Attack()
     {
