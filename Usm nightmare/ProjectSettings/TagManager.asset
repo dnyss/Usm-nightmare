@@ -11,6 +11,9 @@ TagManager:
   - EnemigoDebil
   - EnemigoMedio
   - EnemigoFinal
+  - zoom
+  - pincho
+  - save
   layers:
   - Default
   - TransparentFX

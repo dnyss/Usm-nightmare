@@ -30,7 +30,6 @@ public class PeleaJugador : MonoBehaviour
         //quitarle vida al enemigo
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log("ataqué al enemigo");
             enemy.GetComponent<Enemy>().SerAtacado(DañoAtaque);
         }
     }

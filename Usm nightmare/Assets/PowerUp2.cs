@@ -14,10 +14,9 @@ public class PowerUp2 : MonoBehaviour
     }
     void Recoger()
     {
-        /*GameObject jugadore = GameObject.FindGameObjectWithTag("jugador");
+        GameObject jugadore = GameObject.FindGameObjectWithTag("jugador");
         PeleaJugador stats = jugadore.GetComponent<PeleaJugador>();
-        stats.DañoAtaque += FuerzaExtra;*/
-        Debug.Log("recogido");
+        stats.DañoAtaque += FuerzaExtra;
         Destroy(gameObject);
     }
 }

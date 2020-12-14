@@ -16,7 +16,9 @@ public class MovimientoJugador : MonoBehaviour
 
     private GameObject healthbar;
 
-    [SerializeField] private LayerMask platformLayerMask;
+    //[SerializeField] private LayerMask platformLayerMask;
+    public LayerMask platformLayerMask;
+    public LayerMask platformLayerMask2;
     private BoxCollider2D boxCollider2d;
     public Slider VidaSlider;
     
@@ -59,6 +61,7 @@ public class MovimientoJugador : MonoBehaviour
         Flip(move);
 
     }
+    //Dar vuelta la animación si está mirando a la izquierda
     private void Flip(float move)
     {
         if(move > 0 && !facingRight ||move<0 && facingRight)
@@ -71,14 +74,16 @@ public class MovimientoJugador : MonoBehaviour
         }
     }
 
-//para revisar si está tocando el suelo o no:
+    //para revisar si está tocando el suelo o no:
     private bool IsGrounded(){
         
         float extraHeightText = 1f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
-        return raycastHit.collider != null;
+        RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask2);
+        return (raycastHit.collider != null || raycastHit2.collider !=null);
         }
         
+    //Daño del personaje
     private void OnCollisionEnter2D(Collision2D collision)
     {
     if (collision.gameObject.tag == "EnemigoDebil"){
@@ -96,8 +101,18 @@ public class MovimientoJugador : MonoBehaviour
         animator.SetTrigger("herido");
         VidaSlider.value -= 0.2f;
     }
-        //Si el jugador muere
-        if (VidaSlider.value <= 0)
+    if (collision.gameObject.tag == "pincho")
+    {
+        animator.SetTrigger("herido");
+        VidaSlider.value -= 0.1f;
+    }
+    if (collision.gameObject.tag == "zoom")
+    {
+        animator.SetTrigger("herido");
+        VidaSlider.value -= 9.9f;
+    }
+    //Si el jugador muere
+    if (VidaSlider.value <= 0)
     {
         Destroy(gameObject);
     }
