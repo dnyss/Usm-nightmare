@@ -15,6 +15,7 @@ TagManager:
   - pincho
   - save
   - Gameover
+  - gm
   layers:
   - Default
   - TransparentFX

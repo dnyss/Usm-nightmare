@@ -298,8 +298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: -133.3}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 283.2, y: -22}
+  m_SizeDelta: {x: 107.30139, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43208557
 MonoBehaviour:
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1426,7 +1426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Atr\xE1s"
+  m_Text: "ATR\xC1S"
 --- !u!222 &788708779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2294,7 +2294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77.974, y: -76.6}
+  m_AnchoredPosition: {x: 77.974, y: -93}
   m_SizeDelta: {x: 155.9484, y: 41.88524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591470120

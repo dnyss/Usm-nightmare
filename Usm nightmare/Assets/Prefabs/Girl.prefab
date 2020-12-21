@@ -338,6 +338,9 @@ MonoBehaviour:
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  platformLayerMask2:
+    serializedVersion: 2
+    m_Bits: 512
   VidaSlider: {fileID: 0}
 --- !u!95 &3064681432956730054
 Animator:

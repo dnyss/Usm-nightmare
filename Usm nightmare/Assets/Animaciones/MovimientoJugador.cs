@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MovimientoJugador : MonoBehaviour
 {
@@ -16,12 +17,12 @@ public class MovimientoJugador : MonoBehaviour
 
     private GameObject healthbar;
 
-    //[SerializeField] private LayerMask platformLayerMask;
     public LayerMask platformLayerMask;
     public LayerMask platformLayerMask2;
     private BoxCollider2D boxCollider2d;
     public Slider VidaSlider;
-    
+
+    private GameMaster gm;
 
     private void Awake()
     {
@@ -30,6 +31,10 @@ public class MovimientoJugador : MonoBehaviour
 
     private void Start()
     {
+        //Para los checkpoints:
+        gm = GameObject.FindGameObjectWithTag("gm").GetComponent<GameMaster>();
+        transform.position = gm.lastCheckPointPos;
+        //
         rb = GetComponent<Rigidbody2D>();
 
         healthbar = GameObject.Find("Barra de vida");
@@ -114,7 +119,7 @@ public class MovimientoJugador : MonoBehaviour
     //Si el jugador muere
     if (VidaSlider.value <= 0)
     {
-        Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     }
 }
