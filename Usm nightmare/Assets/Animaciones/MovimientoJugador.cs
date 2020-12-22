@@ -11,7 +11,9 @@ public class MovimientoJugador : MonoBehaviour
     public float speed;
     private float move;
     private Rigidbody2D rb;
-    private bool facingRight; 
+    private bool facingRight;
+
+    public GameObject GameOver;
 
     public Animator animator;
 
@@ -119,7 +121,8 @@ public class MovimientoJugador : MonoBehaviour
     //Si el jugador muere
     if (VidaSlider.value <= 0)
     {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Time.timeScale = 0f;
+            GameOver.SetActive(true);
     }
     }
 }

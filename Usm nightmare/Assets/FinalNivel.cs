@@ -28,4 +28,8 @@ public class FinalNivel : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
+    public void Respawn()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
