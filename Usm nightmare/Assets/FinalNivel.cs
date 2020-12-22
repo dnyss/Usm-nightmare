@@ -11,13 +11,21 @@ public class FinalNivel : MonoBehaviour
     {
         if (collision.CompareTag("jugador"))
         {
-            gm = GameObject.FindWithTag("gm");
-            Destroy(gm);
             Final();
         }
     }
-    void Final()
+    public void Final()
     {
+        gm = GameObject.FindWithTag("gm");
+        Destroy(gm);
         SceneManager.LoadScene("Niveles");
+    }
+    public void Pausa()
+    {
+        Time.timeScale = 0f;
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1f;
     }
 }
