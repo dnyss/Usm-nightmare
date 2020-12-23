@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 3500
-  speed: 20
+  speed: 25
   GameOver: {fileID: 0}
   animator: {fileID: 3064681432956730054}
   platformLayerMask:
