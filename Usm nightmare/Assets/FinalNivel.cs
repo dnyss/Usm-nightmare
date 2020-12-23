@@ -7,11 +7,14 @@ public class FinalNivel : MonoBehaviour
 {
     private GameObject gm;
 
+    public GameObject ganaste;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("jugador"))
         {
-            Final();
+            Time.timeScale = 0f;
+            ganaste.SetActive(true);
         }
     }
     public void Final()

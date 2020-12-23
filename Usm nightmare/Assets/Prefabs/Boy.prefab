@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 3500
   speed: 20
+  GameOver: {fileID: 0}
   animator: {fileID: 7545263070018062929}
   platformLayerMask:
     serializedVersion: 2

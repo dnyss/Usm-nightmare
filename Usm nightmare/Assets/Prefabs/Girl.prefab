@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702312368790638171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.8298965, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 0.51781785, y: 0.51620126, z: 1}
   m_Children:
   - {fileID: 8726589536193499445}
@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 3500
   speed: 20
+  GameOver: {fileID: 0}
   animator: {fileID: 3064681432956730054}
   platformLayerMask:
     serializedVersion: 2

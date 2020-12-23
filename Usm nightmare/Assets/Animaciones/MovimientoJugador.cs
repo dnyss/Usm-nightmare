@@ -119,6 +119,7 @@ public class MovimientoJugador : MonoBehaviour
         VidaSlider.value -= 9.9f;
     }
     //Si el jugador muere
+
     if (VidaSlider.value <= 0)
     {
             Time.timeScale = 0f;
